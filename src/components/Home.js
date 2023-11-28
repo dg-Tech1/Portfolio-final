@@ -3,6 +3,7 @@ import { useEffect, useState, useMemo } from 'react';
 import styles from '../styles/Home.module.css';
 import Link from 'next/link';
 import ScrollButton from './ScrollButton';
+import Image from 'next/image'; // Ajout de l'import pour la composante Image
 
 export default function Home() {
   const images = useMemo(() => [
@@ -12,7 +13,7 @@ export default function Home() {
   ], []);
   const [bgImage, setBgImage] = useState(images[0]);
 
-  const texts = ["Développeur", "Créatif", "Logique", "Curieux", "Déterminé", ":)"];
+  const texts = useMemo(() => ["Développeur", "Créatif", "Logique", "Curieux", "Déterminé", ":)"], []);
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
   const [reverse, setReverse] = useState(false);
@@ -20,9 +21,11 @@ export default function Home() {
   useEffect(() => {
     if (index === texts.length) return;
 
-    if ( subIndex === texts[index].length + 1 && 
-         index !== texts.length - 1 && 
-         !reverse ) {
+    if (
+      subIndex === texts[index].length + 1 &&
+      index !== texts.length - 1 &&
+      !reverse
+    ) {
       setReverse(true);
       return;
     }
@@ -50,31 +53,63 @@ export default function Home() {
   }, [images]);
 
   return (
-    <div id="accueil" className={styles.container} style={{ backgroundImage: `url(${bgImage})` }}>
+    <div
+      id="accueil"
+      className={styles.container}
+      style={{ backgroundImage: `url(${bgImage})` }}
+    >
       <nav className={styles.nav}>
         <div className={styles.icons}>
-          <a href="https://github.com/dg-Tech1" target="_blank" rel="noopener noreferrer">
-            <img src="/icones/1github.png" alt="Github" width="16" height="16" title='GITHUB'/>
+          <a
+            href="https://github.com/dg-Tech1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="/icones/1github.png"
+              alt="Github"
+              width={16}
+              height={16}
+              title="GITHUB"
+            />
           </a>
-          <a href="https://www.linkedin.com/in/david-gagnon-webdevelopper/" target="_blank" rel="noopener noreferrer" title='LINKEDIN'>
-            <img src="/icones/2linkedin3536505.png" alt="LinkedIn" width="16" height="16" />
+          <a
+            href="https://www.linkedin.com/in/david-gagnon-webdevelopper/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="LINKEDIN"
+          >
+            <Image
+              src="/icones/2linkedin3536505.png"
+              alt="LinkedIn"
+              width={16}
+              height={16}
+            />
           </a>
           <a href="mailto:dgbgn01@gmail.com">
-            <img src="/icones/3Mail732200.png" alt="Mail" width="16" height="16" title='MAIL'/>
+            <Image
+              src="/icones/3Mail732200.png"
+              alt="Mail"
+              width={16}
+              height={16}
+              title="MAIL"
+            />
           </a>
         </div>
         <div className={styles.links}>
-         <Link href="#accueil">Accueil</Link>
-         <Link href="#apropos">A Propos</Link>
-         <Link href="#competences">Compétences</Link>
-         <Link href="#projets">Projets</Link>
-         <Link href="#contact">Contact</Link>
+          <Link href="#accueil">Accueil</Link>
+          <Link href="#apropos">A Propos</Link>
+          <Link href="#competences">Compétences</Link>
+          <Link href="#projets">Projets</Link>
+          <Link href="#contact">Contact</Link>
         </div>
       </nav>
       <div className={styles.text}>
-        {`${texts[index].substring(0, subIndex)}${subIndex === texts[index].length ? ' |' : ''}`}
+        {`${texts[index].substring(0, subIndex)}${
+          subIndex === texts[index].length ? ' |' : ''
+        }`}
       </div>
-      
+
       <ScrollButton direction="down" targetId="apropos" />
     </div>
   );
