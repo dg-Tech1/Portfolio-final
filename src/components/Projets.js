@@ -5,13 +5,13 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a lo
 import Image from 'next/image'; // Import the Image component from Next.js
 
 const images = [
-    { url: '/images/zBooki.webp', link: 'https://github.com/link1', link2: 'https://linkedin.com/link1', description: 'Location vacances HTML-CSS' },
-    { url: '/images/zOhMyFood.webp', link: 'https://github.com/link2', link2: 'https://linkedin.com/link2', description: 'Résevations plats HTML-CSS' },
-    { url: '/images/zKasa.webp', link: 'https://github.com/link3', link2: 'https://linkedin.com/link3', description: 'Location REACT-CSS' },
-    { url: '/images/zSophieBuel.webp', link: 'https://github.com/link4', link2: 'https://linkedin.com/link4', description: 'Architecte JAVASCRIPT' },
-    { url: '/images/zPrintIT.webp', link: 'https://github.com/link5', link2: 'https://linkedin.com/link5', description: 'Imprimerie JAVASCRIPT-CSS' },
-    { url: '/images/zNinaCarduci.webp', link: 'https://github.com/link6', link2: 'https://linkedin.com/link6', description: 'Photographe pro SEO-Optimisation' },
-    { url: '/images/zArgentBank.webp', link: 'https://github.com/link7', link2: 'https://linkedin.com/link7', description: 'Site Bancaire, REACT-REDUX' },
+    { url: '/images/zBooki.webp', link: 'https://github.com/dg-Tech1/bookiprojet3', link2: 'https://dg-tech1.github.io/bookiprojet3/', description: 'Location vacances HTML-CSS' },
+    { url: '/images/zOhMyFood.webp', link: 'https://github.com/dg-Tech1/ohmyfoodp4', link2: 'https://dg-tech1.github.io/ohmyfoodp4/index.html', description: 'Résevations plats HTML-CSS' },
+    { url: '/images/zKasa.webp', link: 'https://github.com/dg-Tech1/kasa-ocr-p8', link2: 'https://kasa-ocr-p8.vercel.app/', description: 'Location REACT-CSS' },
+    { url: '/images/zSophieBuel.webp', link: 'https://github.com/dg-Tech1/SophieBuelP6', link2: 'https://urlz.fr/oGwN', description: 'Architecte JAVASCRIPT' },
+    { url: '/images/zPrintIT.webp', link: 'https://github.com/dg-Tech1/Print-it-JS-P5', link2: 'https://dg-tech1.github.io/Print-it-JS-P5/', description: 'Imprimerie JAVASCRIPT-CSS' },
+    { url: '/images/zNinaCarduci.webp', link: 'https://github.com/dg-Tech1/nina-carducci-p9', link2: 'https://dg-tech1.github.io/nina-carducci-p9/', description: 'Photographe pro SEO-Optimisation' },
+    { url: '/images/zArgentBank.webp', link: 'https://github.com/dg-Tech1/ArgentBank_P11', link2: 'https://github.com/dg-Tech1/ArgentBank_P11', description: 'Site Bancaire, REACT-REDUX' },
     { url: '/images/random1.jpg', link: 'https://github.com/link8', link2: 'https://linkedin.com/link8', description: 'Description 8' },
 ];
 
