@@ -1,6 +1,7 @@
 // ScrollButton.js
 import React from 'react';
 import styles from '../styles/ScrollButton.module.css'; // Ajustez le chemin d'importation ici
+import Image from 'next/image'; // Import de la composante Image
 
 const ScrollButton = ({ targetId }) => {
   const handleClick = () => {
@@ -12,7 +13,12 @@ const ScrollButton = ({ targetId }) => {
 
   return (
     <div className={`${styles.scrollButton} ${styles.up}`} onClick={handleClick}>
-      <img src="/icones/double-arrow-vertical.png" alt="Scroll Up" />
+      <Image
+        src="/icones/double-arrow-vertical.png"
+        alt="Scroll Up"
+        width={30} // Ajout de la propriété width
+        height={30} // Ajout de la propriété height
+      />
     </div>
   );
 };
