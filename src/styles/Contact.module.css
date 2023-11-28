@@ -1,0 +1,168 @@
+.contact {
+   width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 100px;
+    background-color: #f2f2f2; 
+  }
+  
+  .sectionHeader {
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px 0;
+    font-weight: bold;
+    font: 500 40px 'Arial', sans-serif;
+    color:#bbb
+}
+  
+  /*.redline {
+    color: red;
+  }*/
+  
+  .contactWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    max-width: 840px;
+  }
+  
+  .formControl, 
+  .textarea {
+    width: 400px;
+    background-color: #f2f2f2;
+    color: #aaa;
+    letter-spacing: 1px;
+  }
+  
+  .sendButton {
+    margin-top: 15px;
+    height: 30px;
+    width: 403px;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+    background-color: red !important;
+    color:white;
+  }
+  
+  .altSendButton {
+    width: 400px;
+    height: 34px;
+    transition: all .2s ease-in-out;
+  }
+  
+  .sendText {
+    display: block;
+    margin-top: 10px;
+    font: 700 12px 'Lato', sans-serif;
+    letter-spacing: 2px;
+  }
+  
+  .altSendButton:hover {
+    transform: translate3d(0px, -29px, 0px);
+  }
+  
+  .directContactContainer {
+    max-width: 400px;
+  }
+  
+  .contactList {
+    list-style-type: none;
+    margin-left: -30px;
+    padding-right: 20px;
+  }
+  
+  .listItem {
+    line-height: 4;
+    color: #aaa;
+  }
+  
+  .contactText {
+    font: 300 18px 'Lato', sans-serif;
+    letter-spacing: 1.9px;
+    color: #bbb;
+    display: inline; /* Ajouté pour afficher le texte sur la même ligne */
+  }
+  
+  .place {
+    margin-left: 62px;
+  }
+  
+  .phone {
+    margin-left: 56px;
+  }
+  
+  .gmail {
+    margin-left: 53px;
+  }
+  
+  .contactText a {
+    color: #bbb;
+    text-decoration: none;
+    transition-duration: 0.2s;
+  }
+  
+  .contactText a:hover {
+    color: red;
+    text-decoration: none;
+  }
+  
+  .contactIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .contactIcon a {
+    color: #aaa;
+    margin: 0 10px;
+    transition: color 0.3s;
+  }
+  
+  .contactIcon a:hover {
+    color: red;
+  }
+  
+  .doubleSize {
+    font-size: 2em;
+  }
+  
+  .copyright {
+    font: 200 14px 'Oswald', sans-serif;
+    color: #555;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  
+  .hr {
+    border-color: #bbb;
+  }
+  
+  .formControl:focus, 
+  .textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px red;
+  }
+  
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  @media only screen and (max-width: 780px) {
+    .contactWrapper {
+      flex-direction: column;
+    }
+  
+    .formHorizontal, .directContactContainer {
+      max-width: 100%;
+    }
+  
+    .formControl, .textarea, .sendButton, .altSendButton {
+      max-width: 100%;
+    }
+  }

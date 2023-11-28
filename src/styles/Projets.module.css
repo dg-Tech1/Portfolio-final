@@ -1,0 +1,75 @@
+.projets {
+  height: 100vh;
+  width: 100%;
+}
+
+.carousel .slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel .control-arrow {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  transition: background 0.3s ease;
+}
+
+.carousel .control-arrow:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+
+.carousel .slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel .control-arrow {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  transition: background 0.3s ease;
+}
+
+.carousel .control-arrow:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.title {
+  text-align: center;
+  color: white;
+  margin-top: 40px;
+}
+
+
+
+            /* Media query for screens with a maximum width of 780px (mobile screens) */
+@media only screen and (max-width: 780px) {
+  .projets {
+    height: 100vh;
+    width: 100%;
+  }
+
+  .carousel .slide {
+    flex-direction: column; /* Stack carousel items vertically on mobile */
+  }
+
+  .carousel .slide > div {
+    width: 50%; /* Adjust width to 50% for two images per slide on mobile */
+  }
+
+  .title {
+    margin-top: 20px; /* Adjust margin for spacing on mobile */
+  }
+
+  .carousel .control-arrow {
+    padding: 5px; /* Adjust padding for smaller size on mobile */
+  }
+}
+
+
+
+

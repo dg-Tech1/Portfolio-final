@@ -1,0 +1,103 @@
+/* Home.module.css */
+.container {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  position: fixed; /* Ajout de cette ligne */
+  width: 100%; /* Ajout de cette ligne pour s'assurer que la barre de navigation s'étend sur toute la largeur de la page */
+  background-color: rgba(0, 0, 0, 0.2); /* Arrière-plan transparent */  
+  backdrop-filter: blur(2px); /* Ajout de l'effet de flou */
+}
+
+.icons a {
+  margin-right: 1em;
+}
+
+.links a {
+  position: relative;
+  margin-left: 1em;
+  color: white;
+}
+
+.links a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: red; /* Couleur de la bordure inférieure */
+  transition: width .7s;
+}
+
+.links a:hover::before {
+  width: 100%;
+}
+
+.icons a:hover img {
+  transform: scale(1.2);
+  transition: transform .2s;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  color: white;
+}
+
+/* Ajout du style active à votre fichier CSS */
+.active {
+  border-bottom: 2px solid red;
+}
+
+
+                     /* Media query for screens with a maximum width of 780px (mobile screens) */
+@media only screen and (max-width: 780px) {
+
+ 
+
+  .nav {
+    flex-direction: column; /* Change to a column layout for mobile */
+    align-items: center; /* Center items in the column */
+    position: static; /* Remove fixed positioning for mobile */
+    background-color: rgba(0, 0, 0, 0.7); /* Darken background for better visibility */
+    backdrop-filter: none; /* Remove blur effect for better visibility */
+  }
+
+  .icons a {
+    margin-right: 0; /* Remove right margin for mobile */
+    margin-bottom: 1em; /* Add bottom margin for spacing */
+    padding: 15px;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column; /* Arrange links in a column for mobile */
+    align-items: center; /* Center links in the column */
+  }
+
+  .links a {
+    margin: 0.5em 0; /* Adjust margin for spacing between links */
+  }
+
+  .text {
+    font-size: 1.5em; /* Adjust font size for mobile */
+  }
+
+  /* Adjust any other styles as needed for mobile */
+}
+ 
+  
+

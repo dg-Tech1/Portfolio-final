@@ -1,0 +1,48 @@
+/* About.module.css */
+
+.carouselContainer {
+  transition: background-image 0.5s ease-in-out;
+}
+
+.cvLink {
+  background-color: hsl(139.41deg 58.62% 54.51%);
+  color: black;
+}
+
+.cvLink:hover {
+  background-color: hsl(139.62deg 59.09% 34.51%);
+}
+
+.helloText {
+  color: rgb(255, 255, 255);
+  font-size: 60px;
+  line-height: 66px;
+  font-family: 'telefon black, system-ui, sans-serif';
+  letter-spacing: -1.2px;
+  margin: 0px 0px 10px;
+  padding: 0px;
+  box-sizing: border-box;
+  /*WebkitFontSmoothing: antialiased;*/
+  font-weight: 400;
+}
+
+.handAnimation {
+  position: relative;
+  display: inline-block;
+  animation: waveAnimation 2s infinite;
+}
+
+@keyframes waveAnimation {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-20deg);
+  }
+}
