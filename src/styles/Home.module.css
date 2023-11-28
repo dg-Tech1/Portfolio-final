@@ -12,10 +12,10 @@
   display: flex;
   justify-content: space-between;
   padding: 1em;
-  position: fixed; /* Ajout de cette ligne */
-  width: 100%; /* Ajout de cette ligne pour s'assurer que la barre de navigation s'étend sur toute la largeur de la page */
-  background-color: rgba(0, 0, 0, 0.2); /* Arrière-plan transparent */  
-  backdrop-filter: blur(2px); /* Ajout de l'effet de flou */
+  position: fixed;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(2px);
 }
 
 .icons a {
@@ -35,8 +35,8 @@
   left: 0;
   width: 0;
   height: 2px;
-  background-color: red; /* Couleur de la bordure inférieure */
-  transition: width .7s;
+  background-color: red;
+  transition: width 0.7s;
 }
 
 .links a:hover::before {
@@ -45,7 +45,7 @@
 
 .icons a:hover img {
   transform: scale(1.2);
-  transition: transform .2s;
+  transition: transform 0.2s;
 }
 
 .text {
@@ -57,47 +57,37 @@
   color: white;
 }
 
-/* Ajout du style active à votre fichier CSS */
 .active {
   border-bottom: 2px solid red;
 }
 
-
-                     /* Media query for screens with a maximum width of 780px (mobile screens) */
+/* Media query for screens with a maximum width of 780px (mobile screens) */
 @media only screen and (max-width: 780px) {
-
- 
-
   .nav {
-    flex-direction: column; /* Change to a column layout for mobile */
-    align-items: center; /* Center items in the column */
-    position: static; /* Remove fixed positioning for mobile */
-    background-color: rgba(0, 0, 0, 0.7); /* Darken background for better visibility */
-    backdrop-filter: none; /* Remove blur effect for better visibility */
+    flex-direction: column;
+    align-items: center;
+    position: static;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: none;
   }
 
   .icons a {
-    margin-right: 0; /* Remove right margin for mobile */
-    margin-bottom: 1em; /* Add bottom margin for spacing */
+    margin-right: 0;
+    margin-bottom: 1em;
     padding: 15px;
   }
 
   .links {
     display: flex;
-    flex-direction: column; /* Arrange links in a column for mobile */
-    align-items: center; /* Center links in the column */
+    flex-direction: column;
+    align-items: center;
   }
 
   .links a {
-    margin: 0.5em 0; /* Adjust margin for spacing between links */
+    margin: 0.5em 0;
   }
 
   .text {
-    font-size: 1.5em; /* Adjust font size for mobile */
+    font-size: 1.5em;
   }
-
-  /* Adjust any other styles as needed for mobile */
 }
- 
-  
-
